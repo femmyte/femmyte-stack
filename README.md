@@ -22,3 +22,16 @@ file {% load static %} then we need to add STATICFILES_DIRS =
 where we will put all the files in the project folder if we want to link link
 css we do it like `<link rel="stylesheet" href="{% static 'css/style.css' %}">`
 the style.css is inside the css folder which is inside the static folder
+
+## CREATE CUSTOM USER MODEL
+
+<!-- the reason we want to create a custom user model is because django usually usually use username as primary key, but i want to use the e-mail as the primary key -->
+
+1. Create CustomUser model
+2. create CustomUser model manager (we need to create this because django user
+   manager will not because we have remove the username field )
+3. Register CustomUser Model in prroject settings
+4. Create CustomUser create and change forms
+5. register Custom User Model on the Admin site
+6. Write Tests for the Custon User model
+7. update github Repository
