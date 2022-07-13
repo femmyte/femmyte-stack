@@ -34,12 +34,12 @@ class CustomUser(AbstractUser):
     def gen_random_slug(self):
         # we generate a username with the users firstname and lastname bu in order to avoid the same username we append a random number to the name
         random_slug = slugify(
-            self.first_name + self.last_name + utils.generate_random_id)
+            self.first_name + self.last_name + utils.generate_random_id())
         # if the user's firstname and lastname are the same and also the random number we
         # loop through untill we get different random number
         while CustomUser.objects.filter(slug=random_slug).exists():
             random_slug = slugify(
-                self.first_name + self.last_name + utils.generate_random_id)
+                self.first_name + self.last_name + utils.generate_random_id())
         return random_slug
 
     def save(self, *args, **kwargs):

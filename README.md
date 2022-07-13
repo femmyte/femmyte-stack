@@ -30,7 +30,7 @@ the style.css is inside the css folder which is inside the static folder
 1. Create CustomUser model
 2. create CustomUser model manager (we need to create this because django user
    manager will not because we have remove the username field )
-3. Register CustomUser Model in prroject settings
+3. Register CustomUser Model in project settings
 4. Create CustomUser create and change forms
 5. register Custom User Model on the Admin site
 6. Write Tests for the Custon User model
